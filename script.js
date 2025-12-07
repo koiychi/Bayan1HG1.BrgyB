@@ -27,31 +27,31 @@ fetch(API_URL)
     })
     .then(data => {
         // Update member names
-        cap.textContent = data.aCapM;
-        sec.textContent = data.aSecMM;
-        trea.textContent = data.aTreaM;
-        res1.textContent = data.aRes1M;
-        res2.textContent = data.aRes2M;
-        res3.textContent = data.aRes3M;
+        cap.textContent = data.bCapM;
+        sec.textContent = data.bSecM;
+        trea.textContent = data.bTreaM;
+        res1.textContent = data.bRes1M;
+        res2.textContent = data.bRes2M;
+        res3.textContent = data.bRes3M;
 
         // Update points
-        if (pointsElement && typeof data.ptsA !== "undefined") {
-          pointsElement.textContent = data.ptsA;
+        if (pointsElement && typeof data.ptsB !== "undefined") {
+          pointsElement.textContent = data.ptsB;
         }
 
         // Update rankings
-        if (ranking && typeof data.posA !== "undefined") {
-          ranking.textContent = data.posA;
+        if (ranking && typeof data.posB !== "undefined") {
+          ranking.textContent = data.posB;
         }
 
         // Update member points
         if (capPts) {
-          capPts.textContent = data.aCap + " Points";
-          secPts.textContent = data.aSec + " Points";
-          treaPts.textContent = data.aTrea + " Points";
-          res1Pts.textContent = data.aRes1 + " Points";
-          res2Pts.textContent = data.aRes2 + " Points";
-          res3Pts.textContent = data.aRes3 + " Points";
+          capPts.textContent = data.bCap + " Points";
+          secPts.textContent = data.bSec + " Points";
+          treaPts.textContent = data.bTrea + " Points";
+          res1Pts.textContent = data.bRes1 + " Points";
+          res2Pts.textContent = data.bRes2 + " Points";
+          res3Pts.textContent = data.bRes3 + " Points";
         }
       }
     )
